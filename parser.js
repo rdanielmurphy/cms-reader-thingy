@@ -71,12 +71,13 @@ function getCoverages(obj, str) {
 
 module.exports = {
     parse : function(data) {
+        var jsonObj = {};
+
         var top = "--------------------------------\nDemographic\n\n--------------------------------";
         var bottom = "--------------------------------\nEmergency Contact\n\n--------------------------------";
-        
+            
         var str = data.substring(data.indexOf(top), data.indexOf(bottom));
-        
-        var jsonObj = {};
+            
         getName(jsonObj, str);
         getDob(jsonObj, str);
         getAddresses(jsonObj, str);

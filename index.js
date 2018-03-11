@@ -22,11 +22,14 @@ app.post('/api/parse', (req, res) => {
 
     let sampleFile = req.files.myfile;
     let stringData = sampleFile.data.toString('ascii', 0, sampleFile.data.length);
-    let parserResult = parser.parse(stringData);
-    
-    var file = 'post.json';
-    jsonfile.writeFileSync(file, parserResult);
-    res.send('Successfully uploaded');
+    try {
+        let parserResult = parser.parse(stringData);
+        var file = 'post.json';
+        jsonfile.writeFileSync(file, parserResult);
+        res.send('Successfully uploaded');
+    } catch (e) {
+        res.send(400);
+    }
 });
 app.get('/api/parse', (req, res) => {
     res.redirect('/');
