@@ -1,7 +1,7 @@
 #### There are two ways to run:
 
 ##### With Docker and dockercompose:
-* dockercompose up
+* docker-compose up
 
 ##### Without Docker:
 * npm install
