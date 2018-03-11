@@ -1,0 +1,22 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "App for homework",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs"
+  ],
+  "dependencies": {
+    "express": "^4.16.1",
+    "express-fileupload": "^0.4.0",
+    "jsonfile": "^4.0.0",
+    "moment": "^2.21.0"
+  },
+  "author": "Daniel Murphy",
+  "license": "MIT"
+}
